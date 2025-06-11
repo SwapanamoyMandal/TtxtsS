@@ -23,7 +23,7 @@ export const AppContextProvider = ({ children }) => {
 
     const [removeRoomWarning,setRemoveRoomWarning] = useState(false)
 
-    const socket = io('http://localhost:3001');
+    const socket = io('https://ttxtss-backend.onrender.com');
 
     const handleCopy = async (id) => {
         try {
