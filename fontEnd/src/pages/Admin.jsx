@@ -118,14 +118,14 @@ const Admin = () => {
           <div className="flex flex-col flex-1 overflow-hidden ">
 
             {/* Scrollable Chat Messages */}
-            <div className="flex-1 overflow-y-auto px-3 sm:px-4 md:px-6 py-4 space-y-2 no-scrollbar">
+            <div className="flex-1 overflow-y-auto overflow-x-hidden px-3 sm:px-4 md:px-6 py-4 space-y-2 no-scrollbar">
               <div className="flex flex-col space-y-2">
                 {chat.map((msg, id) => (
                   msg.system ? (
                     <div key={id} className="text-center text-gray-500 text-xl italic">{msg.message}</div>
                   ) : (
                     <div key={id} className={`flex ${msg.username === username ? 'justify-end' : 'justify-start'}`}>
-                      <div className={`${msg.username === username ? 'bg-red-200' : 'bg-blue-300'} text-black p-2 rounded-lg max-w-[75%] sm:max-w-sm md:max-w-md transition-all duration-300 ease-in-out`}>
+                      <div className={`${msg.username === username ? 'bg-red-200' : 'bg-blue-300'} text-black p-2 rounded-lg max-w-[75%] sm:max-w-sm md:max-w-md transition-all duration-300 ease-in-out break-words`}>
                         <span className="block font-semibold text-sm">{msg.username}</span>
                         <span>{msg.message}</span>
                       </div>
