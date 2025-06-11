@@ -1,5 +1,5 @@
 import axios from "axios";
-const backendServer = 'http://127.0.0.1:3001/'
+const backendServer = 'https://ttxtss-backend.onrender.com'
 
 axios.defaults.withCredentials = true;
 export const api = axios.create({
