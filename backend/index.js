@@ -58,6 +58,13 @@ io.on("connection", (socket) => {
   })
 });
 
+//ip log
+app.use((req,res,next)=>{
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  console.log('client ip = ',ip)
+  next();
+})
+
 app.use('/room',router)
 
 const port = process.env.PORT || 3001
