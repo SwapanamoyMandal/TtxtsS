@@ -23,7 +23,7 @@ const Switch = () => {
         <div className={`block sm:h-8 h-5 sm:w-14 w-10 rounded-full transition ${lockRoom ? 'bg-red-500' : 'bg-[#E5E7EB]'}`} />
         <div
           className={`dot absolute top-1 flex h-3 sm:h-6 w-3 sm:w-6 items-center justify-center rounded-full bg-white transition transform ${
-            lockRoom ? 'translate-x-6' : 'translate-x-0'
+            lockRoom ? 'translate-x-6' : 'translate-x-1'
           }`}
         >
           {lockRoom ? (
